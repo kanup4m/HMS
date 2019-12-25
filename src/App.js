@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import Media from 'react-media';
 import './App.css';
-
+import {
+  Route, Link, BrowserRouter as Router
+} from "react-router-dom";
+import Login from './Views/Login';
+import Mobile from './Views/Mobile';
+import Register from './Views/Register';
+import Dashboard from './Views/Dashboard';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Media queries={{ small: { maxWidth: 599 } }}>
+        {matches =>
+          matches.small ? (
+            <Router>
+              <Route path="/" exact component={Mobile}></Route>
+              <Route path="/register" component={Register}></Route>
+              <Route path="/dash" component={Dashboard}></Route>
+            </Router>
+          ) : (
+              <Login />
+            )
+        }
+      </Media>
     </div>
   );
 }

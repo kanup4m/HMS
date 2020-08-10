@@ -1,10 +1,38 @@
-.abcd {
-  background: transparent linear-gradient(66deg, #6E51EA 0%, #9663F1 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 2px #00000029;
-  opacity: 1;
-  height: 203px;
+body {
+  background-color: #FFFFFF !important;
+  margin: 0;
+}
 
- 
+/* .abcd {
+  background-image:  url(./assets/path.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 103vw;
+  opacity: 1;
+  height: 225px; 
+}  */
+/* .wave-container {
+  position: relative;
+  background: #09F;
+  color: #FFF;
+  text-align: center;
+  overflow: hidden;
+} */
+.abcd {
+  /* position: relative;
+  background: #6E51EA;
+  background-size: 10vh !important;
+  color: #FFF;
+  text-align: center; */
+  margin: 0 auto 0 auto;
+  width: 100%;
+  height: 225px; 
+  background: #6E51EA;
+  border-bottom-right-radius: 100% 60%;
+  border-bottom-left-radius: 100% 60%;
+  box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.3);
+
 }
 .welcome-text {
   text-align: left;
@@ -18,15 +46,40 @@ width: 131px;
 height: 36px;
 }
 .login-btn {
- top: 486px;
-left: 45px;
-width: 100% !important;
+left: 25vw;
+width: 80% !important;
 height: 44px !important;
 background: #6E51EA 0% 0% no-repeat padding-box !important;
 box-shadow: 0px 3px 6px #00000029 !important;
 border-radius: 26px;
 color: white !important;
+text-align: center;
 opacity: 1;
+margin: 0 auto;
+  display: block;
+border: 0;
+
+}
+.login-h2 {
+  text-align: left;
+font: SemiBold 36px Poppins !important;
+letter-spacing: -0.52px;
+color: #FFFFFF;
+padding-left: 30px;
+padding-top: 4vh;
+font-weight: 900;
+}
+.login-p {
+  text-align: left;
+font: Light 13px/36px Poppins;
+letter-spacing: -0.33px;
+color: #FFFFFF;
+opacity: 0.74;
+padding-left: 30px;
+margin: 0 !important;
+}
+.login-form {
+  padding: 25px !important;
 }
 .first-dot {
   top: 159px;
@@ -78,4 +131,209 @@ opacity: 1;
 left:15px;
 width: 232px;
 height: 296px;
+}
+
+.dash-title {
+padding: 36px;
+}
+.dash-line {
+  top: 184px;
+left: 45px;
+width: 270px;
+height: 4px;
+background: #424242 0% 0% no-repeat padding-box;
+border-radius: 2px;
+opacity: 0.75;
+}
+.navbar {
+  color: #737373 !important;
+  box-shadow: 0px 0px 3px #00000029;
+}
+.dash-para {
+  text-align: left;
+font: Light 13px/36px Poppins;
+letter-spacing: -0.26px;
+color: #000000;
+opacity: 0.74;
+}
+.dash-card {
+  background: transparent linear-gradient(54deg, #6E51EA 0%, #9161F0 100%, #9663F1 100%) 0% 0% no-repeat padding-box !important;
+  box-shadow: 0px 5px 7px #9e868629 !important;
+  border-radius: 24px !important;
+  opacity: 1;
+  color: #FFFFFF;
+  width: 232px !important;
+left: 34px;
+  height: 296px !important;
+  -webkit-border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -ms-border-radius: 24px !important;
+  -o-border-radius: 24px !important;
+}
+.footer-btn {
+  background: #FFDC7C 0% 0% no-repeat padding-box !important;
+  box-shadow: 0px 3px 6px #00000029 !important;
+  width: 164px;
+height: 40px;
+border: 0;
+color: black;
+  margin: 0 auto !important;
+  display: block;
+  border-radius: 26px !important;
+  -webkit-border-radius: 26px !important;
+  -moz-border-radius: 26px !important;
+  -ms-border-radius: 26px !important;
+  -o-border-radius: 26px !important;
+}
+.card-body {
+text-align: left;
+font: Regular 15px/18px Poppins !important;
+letter-spacing: -0.3px;
+color: #FFFFFF;
+opacity: 0.75;
+}
+.notification-btn {
+  background: #FFDC7C 0% 0% no-repeat padding-box !important;
+  border-radius: 26px !important;
+  font-size: 12px !important;
+  border: 0;
+  width: 110px;
+height: 38px;
+color: black;
+
+
+}
+.ant-input {
+  border-top: 0px !important;
+  border-left: 0px !important;
+  border-right:0px !important ;
+}
+.request-btn {
+  position: fixed;
+    bottom: 50px;
+    right: 40px;      
+   background: #FCDC7C 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029 !important;
+border-radius: 26px;
+height: 40px;
+width: 121px;
+font-size: 11px;
+font-weight: 100;
+border: 0;
+color: black !important;
+}
+.request-box {
+  box-shadow: 0px 5px 7px #00000029;
+border-radius: 24px;
+background-color: white;
+width: 254px;
+height: 159px;
+position: absolute;
+	top:0;
+	bottom: 30vh;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+.request-text {
+  padding: 30px;
+}
+.sent-btn {
+  width: 54px;
+height: 54px;
+border: 0;
+border-radius: 26px;
+cursor: pointer;
+  position: fixed;
+    bottom: 50px;
+    right: 40px;      
+   background: #FCDC7C 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029 !important;
+}
+.big-bg {
+  position: relative;
+  text-align: center;
+}
+.box {
+  box-shadow: 0px 3px 6px #00000029;
+}
+ .login-web{
+    padding: 51px !important;
+
+ }
+ .login-btn-web {
+height: 44px !important;
+background: #6E51EA 0% 0% no-repeat padding-box !important;
+box-shadow: 0px 3px 6px #00000029 !important;
+color: white !important;
+text-align: center;
+opacity: 1;
+border: 0;
+margin: 0 auto;
+  display: block;
+}
+.card-title {
+  color: #FFFFFF;
+  padding-top: 25px;
+  padding-left: 26px;
+  font-weight: 700;
+}
+.space-carousel {
+  padding-left: 16px;
+  /* background: #DEF1E5; */
+  overflow: hidden;
+}
+.next-btn {
+float: right;
+margin-right: 40px;
+margin-bottom: 40px;
+
+   width: 54px;
+height: 54px;
+border: 0;
+border-radius: 26px;
+cursor: pointer;
+background: #FCDC7C 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029 !important;
+}
+.single-list{
+  padding: 20px;
+}
+.web-nav {
+  background-image: linear-gradient(-4.28deg, #7554eb 0%, #6e51ea 100%);
+  height: 130px;
+}
+.web-login-div {
+  box-shadow: 0px 3px 6px #00000029;
+  margin: 100px 200px 0 200px;
+  left:0; right:0;
+  top:0; bottom:0;
+}
+.login-web-bg {
+  background-image:  url(./assets/web-svg.svg);
+  height: 62vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white !important;
+  padding: 70px;
+
+}
+.web-login-h2 {
+  color:white;
+  font-size: 52px;
+  font-weight: 800;
+}
+.web-book {
+  color: white;
+  margin: 0;
+  padding: 45px;
+  text-align: center;
+}
+.ant-radio-inner::after {
+  background-color: #6E51EA !important;
+}
+.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner {
+  border-color: #6E51EA !important;
 }

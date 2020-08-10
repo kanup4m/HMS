@@ -1,59 +1,65 @@
 import React from 'react';
-import { NavBar, Icon } from 'antd-mobile';
-import { Card, Carousel } from 'antd';
+import { NavBar, Card, WingBlank, Button, Carousel } from 'antd-mobile';
+import { Link } from 'react-router-dom'
+import bed from '../assets/bed.png'
+import notification from '../assets/notification.png'
+import step from '../assets/step2.png'
+
 const Dashboard = () => {
-    function onChange(a, b, c) {
-        console.log(a, b, c);
-    }
-    const settings = {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        dots: true,
-        centerPadding: "40px",
-        slidesToShow: 1,
-        speed: 500
-    };
     return (
         <>
-            <NavBar
+            <NavBar className="navbar"
                 mode="light"
-                icon={<Icon type="left" />}
-                onLeftClick={() => console.log('onLeftClick')}
+                leftContent={[
+                    <img src={bed} style={{ marginRight: '6px' }} />,
+                    <span style={{ fontWeight: 600 }}>BMH</span>,
+                ]}
                 rightContent={[
-                    <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-                    <span>Logout</span>,
+                    <Link to="/notification">
+                        <img src={notification} style={{ marginRight: '16px' }} />
+                    </Link>
+                    ,
+                    <Link to="/" style={{ color: "#737373" }}>Logout</Link>,
                 ]}
             >
-                BMH
+
             </NavBar>
-            <h1 className="dashboard">Dashboard</h1>
-            <h3>Pick your cue!</h3>
-            <Carousel afterChange={onChange} {...settings} >
-                <div>
-                    <Card bordered={false} style={{ width: 272 + "px", height: 296 + "px", textAlign: "center" }} className="dash-card">
-                        <h1 style={{ color: "white" }}>Book Room </h1>
-                        <p style={{ color: "white" }} className="dash-text">After result and fee verification, you may proceed to book your preference for the available rooms.</p>
-                        <br /><button className="book-room">Book Room</button>
+            <div className="dash-title">
+                <h2 style={{ fontSize: 26 + "px", letterSpacing: -0.52 + "px", color: "#000000", fontWeight: 700 }}>Dashboard</h2>
+                <p className="dash-para">Pick your cue!</p>
+                <p className="dash-line"></p>
+            </div>
+            <WingBlank>
+                <Carousel className="space-carousel"
+                    frameOverflow="visible"
+                    cellSpacing={10}
+                    slideWidth={0.8}
+                    autoplay
+                    dots={false}
+                    infinite
+                >
+                    <div className="dash-card">
+                        <h1 className="card-title">Book Room</h1>
+                        <p style={{ paddingLeft: 27 + "px", paddingRight: 27 + "px" }}>After result and fee verification, <br />you may proceed to book your preference for the available rooms.</p>
+                        <br />
+                        <Link to="/book-room"><button className="footer-btn">Book Room</button></Link>
+                    </div>
+                    <div className="dash-card">
+                        <h1 className="card-title">Book Offline</h1>
+                        <p style={{ paddingLeft: 20 + "px", paddingRight: 20 + "px" }}>Contact college admin for the offline allotment.</p>
 
-                    </Card>
-                </div>
-                <div>
-                    <Card bordered={false} style={{ width: 272 + "px", height: 296 + "px", textAlign: "center" }} className="dash-card">
-                        <h1 style={{ color: "white" }}>Book Offline</h1>
-                        <p style={{ color: "white" }}>Contact college admin for the offline allotment.</p>
-                        <br /><button className="book-room">Book Room</button>
+                    </div>
+                    <div className="dash-card">
+                        <h1 className="card-title">Book Room</h1>
+                        <p style={{ paddingLeft: 27 + "px", paddingRight: 27 + "px" }}>After result and fee verification, <br />you may proceed to book your preference for the available rooms.</p>
+                        <br />
+                        <Link to="/book-room"><button className="footer-btn">Book Room</button></Link>
+                    </div>
 
-                    </Card>
-                </div>
-
-
-            </Carousel>
-
-
-
-
-        </>
+                </Carousel>
+            </WingBlank>
+            <img src={step} />
+        </ >
     );
 }
 
